@@ -1,9 +1,14 @@
-package com.wight.c1;
+package com.wight.strategy;
 
 public class MiniDuckSimulator {
     public static void main(String[] args) {
         Duck mallard = new MallardDuck();
         mallard.performQuack();
         mallard.performFly();
+
+        ModelDuck model = new ModelDuck();
+        model.performFly();
+        model.setFlyBehavior(new FlyRocketPowered());
+        model.performFly();
     }
 }

@@ -1,4 +1,4 @@
-package com.wight.c1;
+package com.wight.strategy;
 
 public class MallardDuck extends Duck{
 
