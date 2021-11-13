@@ -4,6 +4,9 @@ public class EnumSingleton {
     private EnumSingleton() {}
 
     private enum Singleton{
+        /**
+         * INSTANCE
+         */
         INSTANCE;
 
         private final EnumSingleton instance;
