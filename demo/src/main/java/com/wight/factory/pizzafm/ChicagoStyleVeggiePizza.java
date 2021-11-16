@@ -1,5 +1,9 @@
 package com.wight.factory.pizzafm;
-
+/**
+ * @author wight
+ * @date 2021/11/16
+ * @apiNote
+ */
 public class ChicagoStyleVeggiePizza extends Pizza {
 	public ChicagoStyleVeggiePizza() {
 		name = "Chicago Deep Dish Veggie Pizza";
@@ -12,7 +16,8 @@ public class ChicagoStyleVeggiePizza extends Pizza {
 		toppings.add("Eggplant");
 	}
  
-	void cut() {
+	@Override
+    void cut() {
 		System.out.println("Cutting the pizza into square slices");
 	}
 }

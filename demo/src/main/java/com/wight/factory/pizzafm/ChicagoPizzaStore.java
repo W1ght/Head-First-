@@ -1,16 +1,24 @@
 package com.wight.factory.pizzafm;
-
+/**
+ * @author wight
+ * @date 2021/11/16
+ * @apiNote
+ */
 public class ChicagoPizzaStore extends PizzaStore {
 
+	@Override
 	Pizza createPizza(String item) {
-        	if (item.equals("cheese")) {
-            		return new ChicagoStyleCheesePizza();
-        	} else if (item.equals("veggie")) {
-        	    	return new ChicagoStyleVeggiePizza();
-        	} else if (item.equals("clam")) {
-        	    	return new ChicagoStyleClamPizza();
-        	} else if (item.equals("pepperoni")) {
-            		return new ChicagoStylePepperoniPizza();
-        	} else return null;
+		switch (item) {
+			case "cheese":
+				return new ChicagoStyleCheesePizza();
+			case "veggie":
+				return new ChicagoStyleVeggiePizza();
+			case "clam":
+				return new ChicagoStyleClamPizza();
+			case "pepperoni":
+				return new ChicagoStylePepperoniPizza();
+			default:
+				return null;
+		}
 	}
 }

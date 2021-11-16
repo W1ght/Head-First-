@@ -1,5 +1,9 @@
 package com.wight.factory.pizzafm;
-
+/**
+ * @author wight
+ * @date 2021/11/16
+ * @apiNote
+ */
 public class DependentPizzaStore {
  
 	public Pizza createPizza(String style, String type) {

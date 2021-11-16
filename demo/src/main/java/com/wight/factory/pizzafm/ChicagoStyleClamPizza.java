@@ -1,5 +1,9 @@
 package com.wight.factory.pizzafm;
-
+/**
+ * @author wight
+ * @date 2021/11/16
+ * @apiNote
+ */
 public class ChicagoStyleClamPizza extends Pizza {
 	public ChicagoStyleClamPizza() {
 		name = "Chicago Style Clam Pizza";
@@ -10,7 +14,8 @@ public class ChicagoStyleClamPizza extends Pizza {
 		toppings.add("Frozen Clams from Chesapeake Bay");
 	}
  
-	void cut() {
+	@Override
+    void cut() {
 		System.out.println("Cutting the pizza into square slices");
 	}
 }

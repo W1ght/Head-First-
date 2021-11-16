@@ -1,16 +1,20 @@
 package com.wight.adapter.duck;
 
+import java.util.Random;
+
 /**
  * @author wight
  * @date 2021/11/13
  * @apiNote
  */
-public class DuckAdapter implements Turkey{
+public class DuckAdapter implements Turkey {
 
     Duck duck;
+    Random rand;
 
     public DuckAdapter(Duck duck) {
         this.duck = duck;
+        rand = new Random();
     }
 
     @Override
@@ -20,10 +24,8 @@ public class DuckAdapter implements Turkey{
 
     @Override
     public void fly() {
-        for (int i = 0; i < 5; i++) {
-            if (i == 5 - 1) {
-                duck.fly();
-            }
+        if (rand.nextInt(5) == 0) {
+            duck.fly();
         }
     }
 }
