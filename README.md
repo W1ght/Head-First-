@@ -44,6 +44,7 @@
 * 迭代器模式——提供一种方法顺序访问一个聚合对象中的各个元素，而不暴露其内部的表示（Java Collection）
 * 组合模式——允许你将对象组合成树形结构来表现“整体/部分”层次结构。组合能让客户以一致的方式处理个别对象以及对象组合
 * 状态模式——允许对象在内部状态改变时改变它的行为，对象看起来好像修改了它的类
+* 代理模式——为另一个对象提供一个替身或占位符以控制这个对象的访问
 
 
 
@@ -84,4 +85,16 @@
 * 也可以抛出异常，那么客户就要对该异常进行处理
 * 组合和叶节点通常是树形结构也算是层次结构
 * 如果这个组合结构太过于复杂，可以考虑实现缓存，保存临时结果，省去遍历的开支
+
+
+
+#### 代理模式有关 rmi
+
+1. 远端服务 `GumballMachine` 编写完需要调用 `rmic` 生成 `Stub` 和 `Skeleton`
+
+   具体用法：在 `classes`目录下 `rmic 包名＋类名` 即：`rmic com.wight.proxy.gumballremote.GumballMachine`
+
+2. 在 `classes` 输入 `rmiregistry` 用于记录注册进来的服务辅助对象
+3. `java GumballMachine java com.wight.proxy.gumballremote.GumballMachineTestDrive seattle.mightygumball.com 100` 开启远程服务，实例化这个服务的实例，并把该服务注册进入 `rmiregistry` 这样就能供客户调用了
+4. 启动 `GumballMonitorTestDrive` 的主方法得到结果
 
