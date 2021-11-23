@@ -98,3 +98,10 @@
 3. `java GumballMachine java com.wight.proxy.gumballremote.GumballMachineTestDrive seattle.mightygumball.com 100` 开启远程服务，实例化这个服务的实例，并把该服务注册进入 `rmiregistry` 这样就能供客户调用了
 4. 启动 `GumballMonitorTestDrive` 的主方法得到结果
 
+
+
+#### 代理、装饰者、适配器
+
+* 装饰者为对象增加行为，代理是控制对象访问
+* 适配器会改变接口，而代理实现相同的接口。保护代理提供部分接口，和适配器有点像
+
